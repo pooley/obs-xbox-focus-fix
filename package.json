@@ -1,0 +1,18 @@
+{
+  "name": "obs-xbox-focus-fix",
+  "version": "0.1.0",
+  "description": "Automatically enables Chromium Focus Emulation for Xbox Remote Play Browser Sources running inside OBS.",
+  "type": "module",
+  "main": "obs-xbox-focus-fix.js",
+  "bin": {
+    "obs-xbox-focus-fix": "obs-xbox-focus-fix.js"
+  },
+  "scripts": {
+    "start": "node obs-xbox-focus-fix.js --watch"
+  },
+  "dependencies": {
+    "ws": "^8.18.0",
+    "chalk": "^5.4.1"
+  },
+  "license": "MIT"
+}

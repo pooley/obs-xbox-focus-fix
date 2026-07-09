@@ -87,9 +87,8 @@ Available options:
 ```
 obs-xbox-focus-fix/
 │
-├── src/
-│   └── obs-xbox-focus-fix.js
-│
+├── obs-xbox-focus-fix.js
+├── logger.js
 ├── LICENSE
 └── README.md
 ```
