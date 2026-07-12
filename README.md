@@ -202,49 +202,22 @@ Adding the same existing Browser Source directly to both `LIVE` and `BRB` avoids
 
 ## BRB workflow
 
-The Xbox Browser Source can remain visually hidden behind the BRB overlay while still being directly selectable from the source list.
+The source should be set with **visibility off**. This will remove its audio from the audio mixer in the BRB scene (in order not to have it with the game audio) but you will still be able to select it in the source list and access the **interact** option.
 
 Example:
 
 ```text
 BRB
 ├── BRB overlay
-└── Xbox Browser Source
+└── Xbox Browser Source (visibility off)
 ```
 
-The Xbox source may be:
-
-- placed underneath the BRB overlay
-- transformed or cropped independently in the BRB scene
-- selected from the source list
-- opened with **Interact** when Remote Play requires attention
-
-This makes it possible to:
+This way you can interact with it to:
 
 - extend an inactive Remote Play session
 - reconnect to the console
 - dismiss Xbox dialogs
 - perform maintenance while the BRB screen remains visible to viewers
-
----
-
-## Audio behavior
-
-OBS audio controls belong to the source itself.
-
-Because `LIVE` and `BRB` reuse the same existing Browser Source, its mute and volume state are shared across both scenes.
-
-Typical workflow:
-
-```text
-LIVE → audio enabled
-BRB  → mute the Xbox source manually
-LIVE → unmute the Xbox source
-```
-
-The visual transform remains scene-specific, but the audio state does not.
-
-At the moment, manual mute/unmute is the simplest reliable solution without adding further automation.
 
 ---
 
